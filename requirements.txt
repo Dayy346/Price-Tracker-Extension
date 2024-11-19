@@ -1,0 +1,5 @@
+express==4.18.2
+puppeteer==19.0.0
+react==18.2.0
+react-dom==18.2.0
+chrome-extension-api==1.0.0

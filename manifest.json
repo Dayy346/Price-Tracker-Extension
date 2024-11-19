@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Price Tracker Extension",
+    "version": "1.0",
+    "description": "Track the price of products and alert users of price drops.",
+    "permissions": ["activeTab", "notifications", "storage", "scripting"],
+    "host_permissions": ["*://*/*"],
+    "action": {
+      "default_popup": "popup/build/index.html", 
+      "default_icon": {
+        "16": "images/6e31e5e5-c1af-4ea0-9f87-d7ee08a906ed.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
